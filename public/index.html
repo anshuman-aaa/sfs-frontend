@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-<!--    <link rel="shortcut icon" href="%PUBLIC_URL%/sf_logo.png" />-->
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+<head>
+  <meta charset="utf-8" />
+  <!--    <link rel="shortcut icon" href="%PUBLIC_URL%/sf_logo.png" />-->
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <!--
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +25,213 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>SFS</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>SFS</title>
+
+  <script src="https://demoapus.com/edumy/wp-includes/js/wp-emoji-release.min.js?ver=5.2.5" type="text/javascript"
+    defer=""></script>
+
+  <style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 .07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+  </style>
+
+  <link rel="stylesheet" id="wp-block-library-css"
+    href="https://demoapus.com/edumy/wp-includes/css/dist/block-library/style.min.css?ver=5.2.5" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="wp-block-library-theme-css"
+    href="https://demoapus.com/edumy/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.5" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="wc-block-style-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/css/blocks/style.css?ver=3.6.5"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="contact-form-7-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="rs-plugin-settings-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.1"
+    type="text/css" media="all">
+
+  <style id="rs-plugin-settings-inline-css" type="text/css">
+    #rs-demo-id {}
+  </style>
+
+  <link rel="stylesheet" id="woocommerce-layout-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=3.6.5"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="woocommerce-smallscreen-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.6.5"
+    type="text/css" media="only screen and (max-width: 768px)">
+  <link rel="stylesheet" id="woocommerce-general-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=3.6.5"
+    type="text/css" media="all">
+
+  <style id="woocommerce-inline-inline-css" type="text/css">
+    .woocommerce form .form-row .required {
+      visibility: visible;
+    }
+  </style>
+
+  <link rel="stylesheet" id="select2-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/css/select2.css?ver=3.6.5" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="elementor-icons-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.3.0"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="elementor-animations-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.6.2"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="elementor-frontend-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.6.2" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="elementor-global-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/global.css?ver=1563248216" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="elementor-post-1180-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/post-1180.css?ver=1563503152" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="edumy-wc-quantity-increment-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/wc-quantity-increment.css?ver=5.2.5" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="edumy-woocommerce-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/woocommerce.css?ver=1.0.8" type="text/css" media="all">
+  <link rel="stylesheet" id="edumy-theme-fonts-css"
+    href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i|Montserrat:400,600,700,800&amp;subset=latin%2Clatin-ext"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="font-flaticon-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/flaticon.css?ver=1.0.0" type="text/css" media="all">
+  <link rel="stylesheet" id="animate-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/animate.css?ver=3.6.0" type="text/css" media="all">
+  <link rel="stylesheet" id="bootstrap-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/bootstrap.css?ver=3.2.0" type="text/css" media="all">
+  <link rel="stylesheet" id="slick-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/slick.css?ver=1.8.0" type="text/css" media="all">
+  <link rel="stylesheet" id="magnific-popup-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/magnific-popup.css?ver=1.1.0" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="perfect-scrollbar-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/perfect-scrollbar.css?ver=0.6.12" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="edumy-template-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/css/template.css?ver=1.0" type="text/css" media="all">
+  <link rel="stylesheet" id="edumy-style-css"
+    href="https://demoapus.com/edumy/wp-content/themes/edumy/style.css?ver=1.0" type="text/css" media="all">
+  <link rel="stylesheet" id="learn-press-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/css/learnpress.css?nocache=1586991307.0889&amp;ver=3.2.5.6"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="jquery-scrollbar-css"
+    href="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/jquery-scrollbar/jquery.scrollbar.css?nocache=1586991307.0889&amp;ver=3.2.5.6"
+    type="text/css" media="all">
+  <link rel="stylesheet" id="google-fonts-1-css"
+    href="https://fonts.googleapis.com/css?family=Nunito%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.2.5"
+    type="text/css" media="all">
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+  <script type="text/javascript"
+    src="//maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;key=AIzaSyAo2NchunkRFZGNMr54Poi6fq7-268R3og&amp;ver=5.2.5"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.1"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.1"></script>
+  <script type="text/javascript" src="https://demoapus.com/edumy/wp-includes/js/underscore.min.js?ver=1.8.3"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/watch.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/jquery.alert.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/circle-bar.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+
+  <script type="text/javascript" src="https://demoapus.com/edumy/wp-includes/js/utils.min.js?ver=5.2.5"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/global.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/jquery-scrollbar/jquery.scrollbar.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/frontend/learnpress.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/frontend/course.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/vendor/jquery.scrollTo.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/learnpress/assets/js/frontend/become-teacher.js?nocache=1586991307.0889&amp;ver=3.2.5.6"></script>
+
+
+  <noscript>
+    <style>
+      .woocommerce-product-gallery {
+        opacity: 1 !important;
+      }
+    </style>
+  </noscript>
+  <style type="text/css">
+    .recentcomments a {
+      display: inline !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  </style>
+
+  <script type="text/javascript">function setREVStartSize(e) {
+      try {
+        e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+        if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
+      } catch (d) { console.log("Failure at Presize of Slider:" + d) }
+    };</script>
+  <style type="text/css" id="wp-custom-css">
+    .elementor-element.elementor-widget-image-carousel .elementor-slick-slider .slick-slide-inner:before {
+      z-index: auto;
+    }
+
+    .main-sticky-header {
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -o-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    @media(min-width: 1200px) {
+
+      .apus-footer .widget-contact-intro .menu li,
+      .apus-footer .widget-nav-menu.dark .menu li,
+      .apus-footer .widget-nav-menu.vertical .menu li {
+        margin-bottom: 10px;
+      }
+
+      .apus-footer .widget-contact-intro .menu li:last-child,
+      .apus-footer .widget-nav-menu.dark .menu li:last-child,
+      .apus-footer .widget-nav-menu.vertical .menu li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="page-template-default page page-id-1180 wp-embed-responsive woocommerce-js header_transparent body-footer-mobile has-header-sticky elementor-default elementor-page elementor-page-1180"
+data-elementor-device-mode="desktop" data-gr-c-s-loaded="true">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="apus-page-loading" style="display: none;">
+    <div class="apus-loader-inner" style=""></div>
+  </div>
+  <div id="root"></div>
+  <div class="hidden" id="apus_login_register_form_wrapper"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +241,99 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+
+  <script type="text/javascript">
+    var c = document.body.className;
+    c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+    document.body.className = c;
+  </script>
+  <link rel="stylesheet" id="elementor-post-2663-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/post-2663.css?ver=1563247661" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="elementor-post-2709-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/post-2709.css?ver=1563247661" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="elementor-post-1178-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/post-1178.css?ver=1563270293" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="elementor-post-1424-css"
+    href="https://demoapus.com/edumy/wp-content/uploads/elementor/css/post-1424.css?ver=1563334923" type="text/css"
+    media="all">
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/bootstrap.min.js?ver=20150330"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/slick.min.js?ver=1.8.0"></script>
+
+  <script type="text/javascript">
+    var edumy_countdown_opts = { "days": "Days", "hours": "Hrs", "mins": "Mins", "secs": "Secs" };
+  </script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/countdown.js?ver=20150315"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/jquery.magnific-popup.min.js?ver=1.1.0"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/jquery.unveil.js?ver=1.1.0"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/perfect-scrollbar.jquery.min.js?ver=0.6.12"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/functions.js?ver=20150330"></script>
+  <script type="text/javascript">
+    (function (html) { html.className = html.className.replace(/\bno-js\b/, 'js') })(document.documentElement);
+  </script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/apus-simple-event/assets/gmap3.js?ver=20131022"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.6.5"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.6.5"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.6.5"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.6"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/number-polyfill.min.js?ver=20150330"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/wc-quantity-increment.js?ver=20150330"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/woocommerce.js?ver=20150330"></script>
+
+  <script type="text/javascript" src="https://demoapus.com/edumy/wp-includes/js/wp-util.min.js?ver=5.2.5"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=3.6.5"></script>
+
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/themes/edumy/js/course.js?ver=20150330"></script>
+  <script type="text/javascript" src="https://demoapus.com/edumy/wp-includes/js/wp-embed.min.js?ver=5.2.5"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.6.2"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.1"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"></script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=4.4.6"></script>
+  <script type="text/javascript">
+    var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "is_rtl": "", "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "2.6.2", "urls": { "assets": "https:\/\/demoapus.com\/edumy\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "general": { "elementor_global_image_lightbox": "yes", "elementor_enable_lightbox_in_editor": "yes" } }, "post": { "id": 1180, "title": "Home 3", "excerpt": "" } };
+  </script>
+  <script type="text/javascript"
+    src="https://demoapus.com/edumy/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.6.2"></script><span
+    id="elementor-device-mode" class="elementor-screen-only"></span>
+
+</body>
+
 </html>
