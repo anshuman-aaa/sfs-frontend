@@ -1,13 +1,13 @@
 {
-  "short_name": "NATURE COPS",
-  "name": "NATURE COPS",
-  "icons": [
-    {
-      "src": "logo_thumb.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
+  "short_name": "SFS",
+  "name": "SFS",
+//  "icons": [
+//    {
+//      "src": "logo_thumb.png",
+//      "sizes": "512x512",
+//      "type": "image/png"
+//    }
+//  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
