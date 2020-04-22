@@ -26,7 +26,7 @@ class CategoryList extends React.Component {
 						<div>
 							<li>
 								{data.category.map((cat, index) => (
-									<ul key={index}><Link to={`/category/${cat.categoryName}`}>{cat.categoryName}</Link></ul>
+									<ul key={index}><Link to={`/category/${cat.categoryId}`}>{cat.categoryName}</Link></ul>
 								)
 								)}
 							</li>

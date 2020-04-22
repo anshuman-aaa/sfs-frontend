@@ -14,9 +14,8 @@ const App = () => {
                     {/* <Route path='/edit/:id' component={Edit} />
                     <Route path='/create' component={Create} />
                     <Route path='/show/:id' component={Show} /> */}
-                    {/* <Route render={() => <Redirect to="/" />} /> */}
                     <Route exact path="/" component={CategoryList} />
-                    <Route exact path="/category/:name" component={Category} />
+                    <Route exact path="/category/:id" component={Category} />
                     <Route exact path="/blog/:id" component={Blog} />
                 </Switch>
             </div>
