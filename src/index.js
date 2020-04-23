@@ -1,5 +1,6 @@
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloClient } from 'apollo-client';
+import { createHttpLink } from 'apollo-link-http';
 import React from "react";
 import { ApolloProvider } from 'react-apollo';
 import ReactDOM from "react-dom";
@@ -10,20 +11,24 @@ import * as serviceWorker from "./serviceWorker";
 import "./Styles/index.sass";
 
 
-
 const stores = linkedStores();
 
+const httpLink = createHttpLink({
+    uri: 'http://localhost:3000/graphql/'
+})
+
 const client = new ApolloClient({
-    uri: "http://localhost:3000/graphql",
-    cache: new InMemoryCache() 
-});
+    link: httpLink,
+    cache: new InMemoryCache()
+})
 
 ReactDOM.render(
     <ApolloProvider client={client}>
         <Provider inject={stores}>
             <App />
         </Provider>
-    </ApolloProvider>,
+    </ApolloProvider>
+    ,
     document.getElementById("root")
 );
 
