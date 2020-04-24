@@ -4,6 +4,7 @@ import "../../Styles/index.sass";
 import Blog from "./Blog";
 import Category from "./Category";
 import CategoryList from "./CategoryList";
+import BlogSample from "./Blog/Blog";
 
 
 const App = () => {
@@ -11,12 +12,10 @@ const App = () => {
         <BrowserRouter>
             <div>
                 <Switch>
-                    {/* <Route path='/edit/:id' component={Edit} />
-                    <Route path='/create' component={Create} />
-                    <Route path='/show/:id' component={Show} /> */}
                     <Route exact path="/" component={CategoryList} />
                     <Route exact path="/category/:id" component={Category} />
                     <Route exact path="/blog/:id" component={Blog} />
+                    <Route exact path="/showBlog" component={BlogSample} />
                 </Switch>
             </div>
         </BrowserRouter>
