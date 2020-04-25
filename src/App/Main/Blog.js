@@ -2,22 +2,6 @@ import React from "react";
 import { Query } from "react-apollo";
 import { BlogFetch } from "../Query/BlogFetch";
 
-// const Blog = ({
-//   id: {
-//     match: {
-//       params: { id }
-//     }
-//   }
-// }) => {
-//   const { data, loading, error } = useQuery(BlogFetch, {
-//     variables: { id }
-//   });
-//   console.log(loading, data, error);
-//   if (loading) return <h1>Loading</h1>;
-//   if (error) return <div>Error</div>
-//   else return <div>{ data }</div>
-// };
-
 class Blog extends React.Component {
   render() {
     return (
@@ -34,7 +18,6 @@ class Blog extends React.Component {
         }
         }
       </Query>
-
     );
   }
 }

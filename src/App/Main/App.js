@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "../../Styles/index.sass";
-import Blog from "./Blog";
+import BlogSample from "./Blog/Blog";
 import Category from "./Category";
 import CategoryList from "./CategoryList";
-import BlogSample from "./Blog/Blog";
 
 
 const App = () => {
@@ -14,8 +13,8 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" component={CategoryList} />
                     <Route exact path="/category/:id" component={Category} />
-                    <Route exact path="/blog/:id" component={Blog} />
-                    <Route exact path="/showBlog" component={BlogSample} />
+                    <Route exact path="/blog/:id" component={BlogSample} />
+                    {/* <Route exact path="/showBlog" component={BlogSample} /> */}
                 </Switch>
             </div>
         </BrowserRouter>
