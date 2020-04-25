@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const BlogFetch = gql`
-    query events($id: ID!) {
-        blog(id: $id) {
+    query blog($id: ID!) {
+        findBlog(id: $id) {
             blogDesc
             blogLogo
             blogTitle
