@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
-import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import SearchIcon from '@material-ui/icons/Search';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -55,12 +55,13 @@ export default function Header(props) {
           <Link
             color="inherit"
             noWrap
+            // to={`/category/${section.categoryId}`}
             key={section.title}
             variant="body2"
-            href={section.url}
+            href={`/category/${section.categoryId}`}
             className={classes.toolbarLink}
           >
-            {section.title}
+            {section.categoryName}
           </Link>
         ))}
       </Toolbar>

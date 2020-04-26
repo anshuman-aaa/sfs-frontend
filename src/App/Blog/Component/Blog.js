@@ -1,17 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { makeStyles } from '@material-ui/core/styles';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import Header from './Header';
-import MainFeaturedPost from './MainFeaturedPost';
+import gql from 'graphql-tag';
+import { default as React } from 'react';
+import { Query } from "react-apollo";
 import FeaturedPost from './FeaturedPost';
-import Main from './Main';
-import Sidebar from './Sidebar';
 import Footer from './Footer';
+import Header from './Header';
+import Main from './Main';
+import MainFeaturedPost from './MainFeaturedPost';
+import Sidebar from './Sidebar';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -19,18 +21,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
+const Categories = gql`
+	query categories($id: ID!){
+		category {
+		categoryId
+		categoryUri
+		categoryName
+		categoryDesc
+    }
+    
+    findBlog(id: $id) {
+      blogDesc
+      blogLogo
+      blogTitle
+    }
+  }
+`;
+
+// const sections = [
+//   { title: 'Technology', url: '#' },
+//   { title: 'Design', url: '#' },
+//   { title: 'Culture', url: '#' },
+//   { title: 'Business', url: '#' },
+//   { title: 'Politics', url: '#' },
+//   { title: 'Opinion', url: '#' },
+//   { title: 'Science', url: '#' },
+//   { title: 'Health', url: '#' },
+//   { title: 'Style', url: '#' },
+//   { title: 'Travel', url: '#' },
+// ];
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
@@ -60,7 +79,7 @@ const featuredPosts = [
   },
 ];
 
-const posts = [];
+// const posts = [];
 
 const sidebar = {
   title: 'About',
@@ -86,32 +105,43 @@ const sidebar = {
   ],
 };
 
-export default function BlogSample() {
+export default function BlogSample(props) {
   const classes = useStyles();
+  const blogId = props.match.params.id
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
-        <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>
-          <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="From the firehose" posts={posts} />
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid>
-        </main>
-      </Container>
+      <Query query={Categories} variables={{ id: blogId }}>
+        {({ loading, error, data }) => {
+          if (loading) return <h2>Loading..</h2>
+          if (error) return <h2>Error : {error.message}</h2>
+
+          return (
+            <Container maxWidth="lg">
+              <Header title="Blog" sections={data.category} />
+              <main>
+                <MainFeaturedPost post={mainFeaturedPost} />
+                <Grid container spacing={4}>
+                  {featuredPosts.map((post) => (
+                    <FeaturedPost key={post.title} post={post} />
+                  ))}
+                </Grid>
+                <Grid container spacing={5} className={classes.mainGrid}>
+                  <Main title={data.findBlog.blogTitle} posts={data.findBlog.blogDesc} />
+                  <Sidebar
+                    title={sidebar.title}
+                    description={sidebar.description}
+                    archives={sidebar.archives}
+                    social={sidebar.social}
+                  />
+                </Grid>
+              </main>
+            </Container>
+          );
+        }
+        }
+      </Query>
       <Footer title="Footer" description="Something here to give the footer a purpose!" />
     </React.Fragment>
   );
