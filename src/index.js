@@ -5,10 +5,12 @@ import React from "react";
 import { ApolloProvider } from 'react-apollo';
 import ReactDOM from "react-dom";
 import { Provider } from "unstated";
-import App from "./App/Main/App";
 import { linkedStores } from "./Helpers/Stores/linkedStores";
+// import App from "./App/Main/App";
+import App from './landing_page/src/components/App';
+// import "./Styles/index.sass";
+import './landing_page/styles/styles.css';
 import * as serviceWorker from "./serviceWorker";
-import "./Styles/index.sass";
 
 
 const stores = linkedStores();

@@ -1,16 +1,17 @@
-import React, { Suspense, lazy } from "react";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
-import Toolbar from "@material-ui/core/Toolbar";
-import CategoryIcon from '@material-ui/icons/Category';
-import Typography from "@material-ui/core/Typography";
-import AppBar from "@material-ui/core/AppBar/AppBar";
-import Grid from "@material-ui/core/Grid";
-import { Link } from "react-router-dom";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
 import { CircularProgress } from '@material-ui/core';
+import AppBar from "@material-ui/core/AppBar/AppBar";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import CategoryIcon from '@material-ui/icons/Category';
+import gql from "graphql-tag";
+import React, { lazy, Suspense } from "react";
+import { Query } from "react-apollo";
+import { Link } from "react-router-dom";
 const Album = lazy(() => import("../Common/Album"));
+
 const Categories = gql`
   query categories {
     category {
