@@ -16,7 +16,7 @@ import * as serviceWorker from "./serviceWorker";
 const stores = linkedStores();
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:3000/graphql/'
+    uri: process.env.REACT_APP_BASEURL + "/graphql/"
 })
 
 const client = new ApolloClient({
