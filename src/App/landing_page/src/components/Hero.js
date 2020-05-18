@@ -1,12 +1,12 @@
 import React from 'react';
-import meadow from '../img/meadow.jpg';
+import meadow from '../img/bg_2.jpg';
 
 const Hero = () => {
   return (
     <section
       id="hero"
       className="blue lighten-4"
-      style={{ backgroundImage: 'url(' + meadow + ')'}}
+      style={{ backgroundImage: 'url(' + meadow + ')' }}
     >
       <div className="container valign-wrapper jc-center">
         <div className="valign center-align white-text">
@@ -17,7 +17,7 @@ const Hero = () => {
 
           <p className="big">
             We build your website using cutting edge frameworks
-            <br/>
+            <br />
             entirely customized and made to order
           </p>
 
