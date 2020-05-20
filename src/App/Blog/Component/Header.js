@@ -1,12 +1,13 @@
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import SearchIcon from '@material-ui/icons/Search';
-import PropTypes from 'prop-types';
-import React from 'react';
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import SearchIcon from "@material-ui/icons/Search";
+import PropTypes from "prop-types";
+import React from "react";
+import { Link as LinkRouter } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -16,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
+    justifyContent: "space-between",
+    overflowX: "auto",
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -47,10 +48,14 @@ export default function Header(props) {
           <SearchIcon />
         </IconButton>
         <Button variant="outlined" size="small">
-          Sign up
+          <LinkRouter to="/Register">Sign up</LinkRouter>
         </Button>
       </Toolbar>
-      <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+      {/* <Toolbar
+        component="nav"
+        variant="dense"
+        className={classes.toolbarSecondary}
+      >
         {sections.map((section) => (
           <Link
             color="inherit"
@@ -64,7 +69,7 @@ export default function Header(props) {
             {section.categoryName}
           </Link>
         ))}
-      </Toolbar>
+      </Toolbar> */}
     </React.Fragment>
   );
 }
