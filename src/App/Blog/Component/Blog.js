@@ -34,22 +34,10 @@ const Categories = gql`
       blogDesc
       blogLogo
       blogTitle
+      categoryId
     }
   }
 `;
-
-// const sections = [
-//   { title: 'Technology', url: '#' },
-//   { title: 'Design', url: '#' },
-//   { title: 'Culture', url: '#' },
-//   { title: 'Business', url: '#' },
-//   { title: 'Politics', url: '#' },
-//   { title: 'Opinion', url: '#' },
-//   { title: 'Science', url: '#' },
-//   { title: 'Health', url: '#' },
-//   { title: 'Style', url: '#' },
-//   { title: 'Travel', url: '#' },
-// ];
 
 const mainFeaturedPost = {
   title: "Title of a longer featured blog post",
@@ -78,11 +66,8 @@ const featuredPosts = [
     imageText: "Image Text",
   },
 ];
-
-// const posts = [];
-
 const sidebar = {
-  title: "About",
+  title: "Contents",
   description:
     "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
   archives: [
@@ -116,35 +101,32 @@ export default function BlogSample(props) {
         {({ loading, error, data }) => {
           if (loading) return <h2>Loading..</h2>;
           if (error) return <h2>Error : {error.message}</h2>;
-
+          const { category, findBlog } = data;
+          const blogKeys = Object.keys(findBlog.blogDesc);
+          console.log(blogKeys);
           return (
             <Container maxWidth="lg">
-              <Header title="Blog" sections={data.category} />
+              <Header
+                title={category[findBlog.categoryId - 1].categoryName}
+                sections={category}
+              />
               <main>
-                <MainFeaturedPost post={data.findBlog} />
+                <MainFeaturedPost post={findBlog} />
 
                 <Grid container spacing={5} className={classes.mainGrid}>
-                  <Main
-                    title={data.findBlog.blogTitle}
-                    posts={data.findBlog.blogDesc}
-                  />
-                  <Sidebar
-                    title={sidebar.title}
-                    description={sidebar.description}
-                    archives={sidebar.archives}
-                    social={sidebar.social}
-                  />
+                  <Sidebar title={"Contents"} contents={blogKeys} />
+                  <Main title={findBlog.blogTitle} posts={findBlog.blogDesc} />
                 </Grid>
               </main>
             </Container>
           );
         }}
       </Query>
-      <Grid container spacing={4}>
+      {/* <Grid container spacing={4}>
         {featuredPosts.map((post) => (
           <FeaturedPost key={post.title} post={post} />
         ))}
-      </Grid>
+      </Grid> */}
       <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"
