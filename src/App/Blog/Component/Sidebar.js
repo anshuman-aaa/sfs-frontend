@@ -37,7 +37,6 @@ function Sidebar({
   }, []);
   const handleContentChange = async (content) => {
     await setActiveContent(content);
-    console.log(activeBlogContent);
   };
   return (
     <Grid item xs={12} md={4}>
