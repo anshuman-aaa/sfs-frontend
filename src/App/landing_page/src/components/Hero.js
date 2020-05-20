@@ -21,8 +21,8 @@ const Hero = () => {
             entirely customized and made to order
           </p>
 
-          <a className="btn waves-light waves-effect m-r-16">Features</a>
-          <a className="btn waves-light waves-effect">Portfolio</a>
+          <a href="/" className="btn waves-light waves-effect m-r-16">Features</a>
+          <a href="/" className="btn waves-light waves-effect">Portfolio</a>
         </div>
       </div>
     </section>

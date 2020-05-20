@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryList from '../../../Blog/CategoryList';
 import About from './About';
+import Box from './Box';
 import Exemplar from './Exemplar';
 import Features from './Features';
 import Footer from './Footer';
@@ -14,6 +15,7 @@ const Landing = () => {
     <div id="app">
       <Navbar />
       <Hero />
+      <Box />
       <CategoryList />
       <Exemplar />
       <Features />
