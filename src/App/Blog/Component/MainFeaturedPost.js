@@ -1,10 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import Button from "@material-ui/core/Button";
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: 'rgba(0,0,0,.3)',
+    backgroundColor: 'rgba(0,0,0,0.3)',
   },
   mainFeaturedPostContent: {
     position: 'relative',
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainFeaturedPost({post}) {
+export default function MainFeaturedPost({ post }) {
   const classes = useStyles();
 
   return (
@@ -46,15 +47,19 @@ export default function MainFeaturedPost({post}) {
       <Grid container>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography component="h1" variant="h3" color="inherit" gutterBottom paragraph>
               {post.blogTitle}
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              {post.blogTitle}
+              {post.blogSummary} Brief of project
             </Typography>
-            <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link>
+            <Typography variant="subtitle1">
+              By &nbsp;
+              <Link variant="subtitle1" href="#">{post.linkText}XYZ Author</Link>&nbsp;&nbsp;<Button variant="contained" color="primary">Follow</Button>
+            </Typography>
+            <Typography>
+              on 29th Feb, 2030
+            </Typography>
           </div>
         </Grid>
       </Grid>

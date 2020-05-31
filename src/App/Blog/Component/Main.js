@@ -4,9 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import React from "react";
-import Markdown from "./Markdown";
 import withStore from "../../../Components/Unstated/withStore";
 import BlogStore from "../Store/blogStore";
+import Markdown from "./Markdown";
 
 const useStyles = makeStyles((theme) => ({
   markdown: {
@@ -25,12 +25,11 @@ function Main({
   const classes = useStyles();
   return (
     <Grid item xs={12} md={8}>
-      <Typography variant="h6" gutterBottom>
-        {title}
+      <Typography variant="h6">
+        {activeBlogContent}
       </Typography>
       <Divider />
       {/* {Object.entries(posts).forEach(([topic, content]) => ( */}
-      <Typography variant="h6">{activeBlogContent}</Typography>
 
       <Markdown
         className={classes.markdown}

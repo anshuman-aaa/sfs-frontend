@@ -8,7 +8,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import gql from "graphql-tag";
 import { default as React } from "react";
 import { Query } from "react-apollo";
-import FeaturedPost from "./FeaturedPost";
+import Navbar from '../../landing_page/src/components/Navbar';
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
@@ -106,6 +106,7 @@ export default function BlogSample(props) {
           console.log(blogKeys);
           return (
             <Container maxWidth="lg">
+              <Navbar />
               <Header
                 title={category[findBlog.categoryId - 1].categoryName}
                 sections={category}
@@ -115,7 +116,7 @@ export default function BlogSample(props) {
 
                 <Grid container spacing={5} className={classes.mainGrid}>
                   <Sidebar title={"Contents"} contents={blogKeys} />
-                  <Main title={findBlog.blogTitle} posts={findBlog.blogDesc} />
+                  <Main posts={findBlog.blogDesc} />
                 </Grid>
               </main>
             </Container>
